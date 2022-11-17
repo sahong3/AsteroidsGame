@@ -1,10 +1,21 @@
-//your variable declarations here
+Spaceship bob = new Spaceship ();
+Star [] dots = new Star[200];
 public void setup() 
 {
-  //your code here
+  size (500,500);
+  background(0);
+  for(int i = 0; i < dots.length; i++){
+    dots[i] = new Star();
+    dots [i].show();
+  }
 }
 public void draw() 
 {
-  //your code here
+  bob.show();
 }
 
+public void keyPressed(){
+  if (key == 'h'){
+    bob.hyperspace();
+  }
+}
