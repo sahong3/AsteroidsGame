@@ -38,7 +38,6 @@ public void draw()
 
 public void keyPressed(){
   if (key == 'h'){
-    clear();
     bob.hyperspace();
     
   }
