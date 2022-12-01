@@ -1,11 +1,15 @@
 Spaceship bob = new Spaceship();
 Star [] dots = new Star[200];
+ArrayList <Asteroid> rock = new ArrayList <Asteroid> ();
 public void setup() 
 {
   size (500,500);
   background(0);
   for(int i = 0; i < dots.length; i++){
     dots[i] = new Star();
+  }
+  for(int i = 0; i < 15; i++){
+    rock.add(new Asteroid());
   }
   
 }
@@ -14,6 +18,10 @@ public void draw()
   background(0);
   for(int i = 0; i < dots.length; i++){
     dots [i].show();
+  }
+  for(int i = 0; i < rock.size(); i++){
+    rock.get(i).show();
+    rock.get(i).move();
   }
   if (keyPressed){
     if(key == 'a'){
