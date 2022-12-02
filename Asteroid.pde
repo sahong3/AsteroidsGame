@@ -10,21 +10,30 @@ class Asteroid extends Floater
     yCorners = new int [corners];
     xCorners[0] = (int)(Math.random()* 5) -11;
     yCorners[0] = (int)(Math.random()* 5)-8;
-    xCorners[1] = (int)(Math.random()* 5) +7;
+    xCorners[1] = (int)(Math.random()*10) +7;
     yCorners[1] = (int)(Math.random()* 5) -8;
-    xCorners[2] = (int)(Math.random()* 5) +13;
+    xCorners[2] = (int)(Math.random()* 5)+10;
     yCorners[2] = 0;
-    xCorners[3] = (int)(Math.random()* 5) + 6;
-    yCorners[3] = (int)(Math.random()* 5) +10;
+    xCorners[3] = (int)(Math.random()* 5) +10;
+    yCorners[3] = (int)(Math.random()*10) +10;
     xCorners[4] = (int)(Math.random()* 5)-11;
     yCorners[4] =(int)(Math.random()* 5) +8 ;
     xCorners[5] = (int)(Math.random()) -10;
     yCorners[5] = 0;
     
-    //rotSpeed = (double)(Math.Random());
+    myXspeed += (int)(Math.random()* 5) -2;    
+    myYspeed += (int)(Math.random()* 5) -2; 
+    rotSpeed = (double)(Math.random()*1);
   }
   public void move(){
       turn(rotSpeed);
       super.move();
   }
+  public double getX(){
+        return myCenterX;
+    }
+    
+   public double getY(){
+        return myCenterY;
+    }
 }
