@@ -1,6 +1,6 @@
 Spaceship bob = new Spaceship();
 Star [] dots = new Star[200];
-ArrayList <Asteroid> rock = new ArrayList <Asteroid> ();
+ArrayList <Asteroid> rock = new ArrayList <Asteroid>();
 public void setup() 
 {
   size (500,500);
@@ -19,10 +19,15 @@ public void draw()
   for(int i = 0; i < dots.length; i++){
     dots [i].show();
   }
+  
   for(int i = 0; i < rock.size(); i++){
     rock.get(i).show();
     rock.get(i).move();
+    float d = dist((float)bob.getX(), (float)bob.getY(), (float)rock.get(i).getX(),  (float)rock.get(i).getY());
+    if (d <10)  
+      rock.remove(i);
   }
+ 
   if (keyPressed){
     if(key == 'a'){
       bob.turn(-5);
