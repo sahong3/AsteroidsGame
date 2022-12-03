@@ -1,6 +1,6 @@
 Spaceship bob = new Spaceship();
 Star [] dots = new Star[200];
-ArrayList<Asteroid>rock = new ArrayList <Asteroid>();
+ArrayList<Asteroid>rock = new ArrayList<Asteroid>();
 public void setup() 
 {
   size (500,500);
