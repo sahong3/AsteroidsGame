@@ -1,6 +1,7 @@
 Spaceship bob = new Spaceship();
 Star [] dots = new Star[200];
 ArrayList <Asteroid> rock = new ArrayList <Asteroid>();
+ArrayList <Bullet> shots = new ArrayList < Bullet>();
 public void setup() 
 {
   size (500,500);
@@ -27,6 +28,12 @@ public void draw()
     if (d <10)  
       rock.remove(i);
   }
+  
+  for(int i = 0; i < shots.size(); i++){
+    shots.get(i).move();
+    shots.get(i).show();
+  }
+  
  
   if (keyPressed){
     if(key == 'a'){
@@ -54,4 +61,6 @@ public void keyPressed(){
     bob.hyperspace();
     
   }
+  else if(key == ' ')
+    shots.add(new Bullet(bob));
 }
