@@ -16,4 +16,11 @@ class Bullet extends Floater {
     myCenterX += myXspeed;    
     myCenterY += myYspeed;
   }
+  public double getX(){
+        return myCenterX;
+    }
+    
+    public double getY(){
+        return myCenterY;
+    }
 }
